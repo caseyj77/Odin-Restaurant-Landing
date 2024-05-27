@@ -12,7 +12,7 @@ console.log('it is working');
 
 
 // adds the welcome message to the home page
-function welcomeMessage() {
+(function welcomeMessage() {
     const contentDiv = document.getElementById('content');
 
     const myHeading = document.createElement('h1');
@@ -22,7 +22,24 @@ function welcomeMessage() {
     const p = document.createElement('p');
     p.textContent = 'Salt and Pepper Bistro offers a warm, farm-to-table experience where every breakfast is made from the freshest local meats and vegetables, ensuring a nourishing start to your day. Our lunch menu follows suit, celebrating the best of the season\'s bounty with rustic yet refined dishes that showcase our commitment to local sourcing. Come join us and savor the true flavors of our community!';
     contentDiv.appendChild(p);
+})();
+
+function menu() {
+    const menuButton = document.getElementById('menu');
+    menuButton.addEventListener('click', function() {
+        const contentDiv = document.getElementById('content');
+        contentDiv.innerHTML = ''; // Clear the content inside the div
+        console.log('Content cleared!');
+    });
+
+    const menuButton = document.getElementById('about');
+    menuButton.addEventListener('click', function() {
+        const contentDiv = document.getElementById('content');
+        contentDiv.innerHTML = ''; // Clear the content inside the div
+        console.log('Content cleared!');
+    });
 }
 
-
-document.addEventListener('DOMContentLoaded', welcomeMessage);
+document.addEventListener('DOMContentLoaded', function() {
+    menu();
+});

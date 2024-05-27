@@ -1,5 +1,5 @@
 button {
-    background-color: blue;
+    background-color: rgb(134, 134, 250);
     color: white;
     border-radius: 25px;
     min-width: 120px;
@@ -11,6 +11,17 @@ nav {
     text-align: center;
 }
 
-body {
-    color: white;
+
+
+#content {
+    width: 600px; /* Set a specific width for the card */
+    padding: 20px; /* Adds padding inside the card */
+    background-color: rgb(151, 157, 221); /* Gives the card a white background */
+    border-radius: 10px; /* Rounds the corners of the card */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle shadow to the card */
+    display: flex; /* Enables flexbox for vertical centering of its children */
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    opacity: 0.7;
 }
+
