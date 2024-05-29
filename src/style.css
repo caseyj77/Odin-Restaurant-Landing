@@ -19,8 +19,7 @@ nav {
     background-color: rgb(151, 157, 221); /* Gives the card a white background */
     border-radius: 10px; /* Rounds the corners of the card */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle shadow to the card */
-    display: flex; /* Enables flexbox for vertical centering of its children */
-    flex-direction: column;
+    display: grid;
     align-items: center; /* Centers content horizontally */
     opacity: 0.7;
 }
