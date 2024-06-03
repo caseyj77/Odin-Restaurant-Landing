@@ -1,42 +1,64 @@
+/* Styling for buttons */
 button {
     background-color: rgb(134, 134, 250);
     color: white;
     border-radius: 25px;
     min-width: 120px;
     min-height: 40px;
-
 }
 
+/* Global Layout */
+body, html {
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    margin: 0; /* Removes default margin */
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr; /* 3 columns */
+    grid-template-rows: auto 1fr; /* Two rows, top auto for nav, rest for content */
+    gap: 10px; /* Optional: adds space between columns and rows */
+}
+
+/* Styling for header to correctly place it in the grid */
+header {
+    grid-column: 2; /* Ensures header is only in the second column */
+    grid-row: 1; /* Ensures header is only in the first row */
+    width: 100%; /* Optional: Ensures header fills the column */
+}
+
+/* Centering text in the navigation */
 nav {
     text-align: center;
 }
 
-
-
+/* Main content styling */
 #content {
-    width: 600px; /* Set a specific width for the card */
-    padding: 20px; /* Adds padding inside the card */
-    background-color: rgb(151, 157, 221); /* Gives the card a white background */
-    border-radius: 10px; /* Rounds the corners of the card */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle shadow to the card */
-    display: grid;
-    align-items: center; /* Centers content horizontally */
-    opacity: 0.7;
+    grid-column: 2; /* Content spans only the middle column */
+    grid-row: 2; /* Content is in the second row */
+    width: 100%; /* Takes the full width of the grid column */
+    padding: 20px; /* Adds padding inside the content area */
+    background-color: rgb(151, 157, 221); /* Light blue background */
+    opacity: 0.8;
+    border-radius: 10px; /* Rounds the corners of the content area */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle shadow */
+    display: flex; /* Flex display to manage inner content */
+    flex-direction: column; /* Stacks children vertically */
+    align-items: center; /* Centers items horizontally */
+    overflow: auto; /* Adds scroll to content if overflow */
 }
 
+
+/* Styling for cards within the content */
 .card {
     border: 1px solid #ccc;
     border-radius: 8px;
-    margin: 10px;
+    margin: 10px 0; /* Vertical margin for separation */
     padding: 10px;
-    width: 300px;
-  }
-  
-  .card img {
-    max-width: 300px; /* Maximum width */
-    max-height: 300px; /* Maximum height */
+    width: 80%; /* Relative width to the content area */
+}
+
+/* Styling for images in cards */
+.card img {
+    width: 100%; /* Image takes full width of the card */
     height: auto;
     border-radius: 5px;
-  }
-  
-  
+}
